@@ -1,0 +1,328 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		809FC33A1DBE64EF0046A25A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809FC3391DBE64EF0046A25A /* AppDelegate.swift */; };
+		809FC33C1DBE64EF0046A25A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809FC33B1DBE64EF0046A25A /* ViewController.swift */; };
+		809FC33F1DBE64EF0046A25A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809FC33D1DBE64EF0046A25A /* Main.storyboard */; };
+		809FC3411DBE64EF0046A25A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809FC3401DBE64EF0046A25A /* Assets.xcassets */; };
+		809FC3441DBE64F00046A25A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809FC3421DBE64F00046A25A /* LaunchScreen.storyboard */; };
+		80C299581DBF8A6700900C63 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C299571DBF8A6700900C63 /* AVFoundation.framework */; };
+		80C2995A1DBF904E00900C63 /* beep21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 80C299591DBF904E00900C63 /* beep21.mp3 */; };
+		80C299611DBF9ABA00900C63 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C299601DBF9ABA00900C63 /* UIButtonExtension.swift */; };
+		80C299641DBFA94F00900C63 /* AppUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C299631DBFA94F00900C63 /* AppUtils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		809FC3361DBE64EF0046A25A /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		809FC3391DBE64EF0046A25A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		809FC33B1DBE64EF0046A25A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		809FC33E1DBE64EF0046A25A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		809FC3401DBE64EF0046A25A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		809FC3431DBE64F00046A25A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		809FC3451DBE64F00046A25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80C299571DBF8A6700900C63 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		80C299591DBF904E00900C63 /* beep21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep21.mp3; sourceTree = "<group>"; };
+		80C299601DBF9ABA00900C63 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
+		80C299631DBFA94F00900C63 /* AppUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		809FC3331DBE64EF0046A25A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80C299581DBF8A6700900C63 /* AVFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		809FC32D1DBE64EE0046A25A = {
+			isa = PBXGroup;
+			children = (
+				80C299571DBF8A6700900C63 /* AVFoundation.framework */,
+				809FC3381DBE64EF0046A25A /* StopWatch */,
+				809FC3371DBE64EF0046A25A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		809FC3371DBE64EF0046A25A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				809FC3361DBE64EF0046A25A /* StopWatch.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		809FC3381DBE64EF0046A25A /* StopWatch */ = {
+			isa = PBXGroup;
+			children = (
+				80C299621DBFA94400900C63 /* Utils */,
+				80C2995F1DBF9AA700900C63 /* Extensions */,
+				809FC3391DBE64EF0046A25A /* AppDelegate.swift */,
+				809FC33B1DBE64EF0046A25A /* ViewController.swift */,
+				809FC33D1DBE64EF0046A25A /* Main.storyboard */,
+				80C299591DBF904E00900C63 /* beep21.mp3 */,
+				809FC3401DBE64EF0046A25A /* Assets.xcassets */,
+				809FC3421DBE64F00046A25A /* LaunchScreen.storyboard */,
+				809FC3451DBE64F00046A25A /* Info.plist */,
+			);
+			path = StopWatch;
+			sourceTree = "<group>";
+		};
+		80C2995F1DBF9AA700900C63 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				80C299601DBF9ABA00900C63 /* UIButtonExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		80C299621DBFA94400900C63 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				80C299631DBFA94F00900C63 /* AppUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		809FC3351DBE64EF0046A25A /* StopWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 809FC3481DBE64F00046A25A /* Build configuration list for PBXNativeTarget "StopWatch" */;
+			buildPhases = (
+				809FC3321DBE64EF0046A25A /* Sources */,
+				809FC3331DBE64EF0046A25A /* Frameworks */,
+				809FC3341DBE64EF0046A25A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StopWatch;
+			productName = StopWatch;
+			productReference = 809FC3361DBE64EF0046A25A /* StopWatch.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		809FC32E1DBE64EE0046A25A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Mutee ur Rehman";
+				TargetAttributes = {
+					809FC3351DBE64EF0046A25A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 809FC3311DBE64EE0046A25A /* Build configuration list for PBXProject "StopWatch" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 809FC32D1DBE64EE0046A25A;
+			productRefGroup = 809FC3371DBE64EF0046A25A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				809FC3351DBE64EF0046A25A /* StopWatch */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		809FC3341DBE64EF0046A25A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				809FC3441DBE64F00046A25A /* LaunchScreen.storyboard in Resources */,
+				809FC3411DBE64EF0046A25A /* Assets.xcassets in Resources */,
+				809FC33F1DBE64EF0046A25A /* Main.storyboard in Resources */,
+				80C2995A1DBF904E00900C63 /* beep21.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		809FC3321DBE64EF0046A25A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				809FC33C1DBE64EF0046A25A /* ViewController.swift in Sources */,
+				809FC33A1DBE64EF0046A25A /* AppDelegate.swift in Sources */,
+				80C299611DBF9ABA00900C63 /* UIButtonExtension.swift in Sources */,
+				80C299641DBFA94F00900C63 /* AppUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		809FC33D1DBE64EF0046A25A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				809FC33E1DBE64EF0046A25A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		809FC3421DBE64F00046A25A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				809FC3431DBE64F00046A25A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		809FC3461DBE64F00046A25A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		809FC3471DBE64F00046A25A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		809FC3491DBE64F00046A25A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StopWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mutee.StopWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		809FC34A1DBE64F00046A25A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = StopWatch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.mutee.StopWatch;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		809FC3311DBE64EE0046A25A /* Build configuration list for PBXProject "StopWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809FC3461DBE64F00046A25A /* Debug */,
+				809FC3471DBE64F00046A25A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		809FC3481DBE64F00046A25A /* Build configuration list for PBXNativeTarget "StopWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				809FC3491DBE64F00046A25A /* Debug */,
+				809FC34A1DBE64F00046A25A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 809FC32E1DBE64EE0046A25A /* Project object */;
+}
