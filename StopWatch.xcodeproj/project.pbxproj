@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		809FC3361DBE64EF0046A25A /* StopWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StopWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		809FC3361DBE64EF0046A25A /* UppercaseTea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UppercaseTea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809FC3391DBE64EF0046A25A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809FC33B1DBE64EF0046A25A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		809FC33E1DBE64EF0046A25A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,7 +56,7 @@
 		809FC3371DBE64EF0046A25A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				809FC3361DBE64EF0046A25A /* StopWatch.app */,
+				809FC3361DBE64EF0046A25A /* UppercaseTea.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,7 +110,7 @@
 			);
 			name = StopWatch;
 			productName = StopWatch;
-			productReference = 809FC3361DBE64EF0046A25A /* StopWatch.app */;
+			productReference = 809FC3361DBE64EF0046A25A /* UppercaseTea.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,7 +285,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mutee.StopWatch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = UppercaseTea;
 			};
 			name = Debug;
 		};
@@ -297,7 +297,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mutee.StopWatch;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = UppercaseTea;
 			};
 			name = Release;
 		};
