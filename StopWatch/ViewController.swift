@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     //MARK: Properties
     var remainingStopWatchTimeInSeconds : Int = 0
     var timer: NSTimer!
-    let buttonsBorderColor = UIColor.init(red: 77.0/255.0, green: 77.0/255.0, blue: 77.0/255.0, alpha: 1.0)
+    let buttonsBorderColor = UIColor.init(red: 141.0/255.0, green: 130.0/255.0, blue: 86.0/255.0, alpha: 1.0)
     let buttonsBorderWidth: Float = 2.0
    
 
