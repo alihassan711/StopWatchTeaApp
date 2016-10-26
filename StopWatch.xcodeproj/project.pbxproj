@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		807A602A1DC11294000396C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807A60291DC11294000396C1 /* CoreGraphics.framework */; };
 		809FC33A1DBE64EF0046A25A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809FC3391DBE64EF0046A25A /* AppDelegate.swift */; };
 		809FC33C1DBE64EF0046A25A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809FC33B1DBE64EF0046A25A /* ViewController.swift */; };
 		809FC33F1DBE64EF0046A25A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809FC33D1DBE64EF0046A25A /* Main.storyboard */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		807A60291DC11294000396C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		809FC3361DBE64EF0046A25A /* UppercaseTea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UppercaseTea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809FC3391DBE64EF0046A25A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809FC33B1DBE64EF0046A25A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				807A602A1DC11294000396C1 /* CoreGraphics.framework in Frameworks */,
 				80C299581DBF8A6700900C63 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -44,12 +47,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		807A60281DC11294000396C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				807A60291DC11294000396C1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		809FC32D1DBE64EE0046A25A = {
 			isa = PBXGroup;
 			children = (
 				80C299571DBF8A6700900C63 /* AVFoundation.framework */,
 				809FC3381DBE64EF0046A25A /* StopWatch */,
 				809FC3371DBE64EF0046A25A /* Products */,
+				807A60281DC11294000396C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +138,7 @@
 					809FC3351DBE64EF0046A25A = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = QJWYED6AB8;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -237,7 +250,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "72a0a64b-d3f9-4bd6-be80-18becc6dc68c";
+				PROVISIONING_PROFILE = "7fcca7ea-8976-42c8-ba77-f59750003c14";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -278,7 +291,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "72a0a64b-d3f9-4bd6-be80-18becc6dc68c";
+				PROVISIONING_PROFILE = "7fcca7ea-8976-42c8-ba77-f59750003c14";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -295,7 +308,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uwg.United;
 				PRODUCT_NAME = UppercaseTea;
+				PROVISIONING_PROFILE = "7fcca7ea-8976-42c8-ba77-f59750003c14";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -310,7 +325,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uwg.United;
 				PRODUCT_NAME = UppercaseTea;
+				PROVISIONING_PROFILE = "7fcca7ea-8976-42c8-ba77-f59750003c14";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

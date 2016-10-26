@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import QuartzCore
 extension UIButton {
     func makeRound() {
         if self.frame.size.width == self.frame.size.height {
@@ -15,6 +16,6 @@ extension UIButton {
     }
     func setBorder(width: Float, color: UIColor) {
         self.layer.borderWidth = CGFloat(width)
-        self.layer.borderColor = color.CGColor
+        self.layer.borderColor = color.cgColor
     }
 }

@@ -25,7 +25,7 @@ class ViewController: UIViewController {
 
     //MARK: Properties
     var remainingStopWatchTimeInSeconds : Int = 0
-    var timer: NSTimer!
+    var timer: Timer!
     let buttonsBorderColor = UIColor.init(red: 141.0/255.0, green: 130.0/255.0, blue: 86.0/255.0, alpha: 1.0)
     let buttonsBorderWidth: Float = 2.0
    
@@ -33,26 +33,27 @@ class ViewController: UIViewController {
     //MARK: View Controller Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        //Remove from notifications if already added as an observer.
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+        
+        //Add as an observer
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.appGoingToBackground), name: NSNotification.Name.UIApplicationWillResignActive, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ViewController.appDidBecomeActive), name: NSNotification.Name.UIApplicationDidBecomeActive, object: nil)
+    }
+    override func viewDidLayoutSubviews() {
         makeAllButtonsRound()
         setBordersOfAllButtons()
     }
-    override func viewWillAppear(animated: Bool) {
-        //Remove from notifications if already added as an observer.
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationWillResignActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().removeObserver(self, name: UIApplicationDidBecomeActiveNotification, object: nil)
-        
-        //Add as an observer
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.appGoingToBackground), name: UIApplicationWillResignActiveNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.appDidBecomeActive), name: UIApplicationDidBecomeActiveNotification, object: nil)
-    }
-
 }
 
 //MARK: TIMER HANDLING
 extension ViewController {
     func setTimer() {
         endTimer()
-        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.timerUpdated), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.timerUpdated), userInfo: nil, repeats: true)
     }
     func endTimer() {
         if timer != nil {
@@ -91,16 +92,16 @@ extension ViewController {
         
         endTimer()
         if remainingStopWatchTimeInSeconds > 0 {
-            NSUserDefaults.standardUserDefaults().setObject(NSDate(timeIntervalSinceNow: NSTimeInterval(remainingStopWatchTimeInSeconds)), forKey: "timerEndingDate")
-            NSUserDefaults.standardUserDefaults().synchronize()
+            UserDefaults.standard.set(Date(timeIntervalSinceNow: TimeInterval(remainingStopWatchTimeInSeconds)), forKey: "timerEndingDate")
+            UserDefaults.standard.synchronize()
             scheduleNotification()
         }
     }
     func appDidBecomeActive() {
-        if NSUserDefaults.standardUserDefaults().objectForKey("timerEndingDate") != nil { //If there is some ending date
-            let endingDate = NSUserDefaults.standardUserDefaults().objectForKey("timerEndingDate") as! NSDate
-            if endingDate.compare(NSDate()) == .OrderedDescending {     // If ending date is greater than current date
-                let differenceInSeconds = endingDate.timeIntervalSinceDate(NSDate()) //Difference Between ending date and current date In Seconds
+        if UserDefaults.standard.object(forKey: "timerEndingDate") != nil { //If there is some ending date
+            let endingDate = UserDefaults.standard.object(forKey: "timerEndingDate") as! Date
+            if endingDate.compare(Date()) == .orderedDescending {     // If ending date is greater than current date
+                let differenceInSeconds = endingDate.timeIntervalSince(Date()) //Difference Between ending date and current date In Seconds
                 remainingStopWatchTimeInSeconds = Int(differenceInSeconds) //This difference is the remaining time of stop watch
                 setTimer()
             }
@@ -112,8 +113,8 @@ extension ViewController {
             remainingStopWatchTimeInSeconds = 0
         }
         setstopWatchRemainingTimeLabelText()
-        NSUserDefaults.standardUserDefaults().removeObjectForKey("timerEndingDate")
-        NSUserDefaults.standardUserDefaults().synchronize()
+        UserDefaults.standard.removeObject(forKey: "timerEndingDate")
+        UserDefaults.standard.synchronize()
     }
 
 }
@@ -123,8 +124,8 @@ extension ViewController {
     func scheduleNotification() {
         AppUtils.removeAllLocalNotifications()
       
-        let notificationScheduleDate = NSDate(timeIntervalSinceNow: NSTimeInterval(remainingStopWatchTimeInSeconds) )
-        AppUtils.scheduleLocalNotification(notificationScheduleDate, alertBody: "Time Up", alertAction: "be awesome!", soundName: "beep21.mp3", userInfo: ["CustomField1": "w00t"])
+        let notificationScheduleDate = Date(timeIntervalSinceNow: TimeInterval(remainingStopWatchTimeInSeconds) )
+        AppUtils.scheduleLocalNotification(notificationScheduleDate, alertBody: "Time Up", alertAction: "be awesome!", soundName: "beep21.mp3", userInfo: ["CustomField1": "w00t" as AnyObject])
     }
 
 }
@@ -132,6 +133,7 @@ extension ViewController {
 //MARK: UI SETTINGS
 extension ViewController {
     func makeAllButtonsRound() {
+        
         blackButton.makeRound()
         rooibosButton.makeRound()
         greenButton.makeRound()
@@ -141,43 +143,43 @@ extension ViewController {
         stopButton.makeRound()
     }
     func setBordersOfAllButtons() {
-        blackButton.setBorder(buttonsBorderWidth, color: buttonsBorderColor)
-        rooibosButton.setBorder(buttonsBorderWidth, color: buttonsBorderColor)
-        greenButton.setBorder(buttonsBorderWidth, color: buttonsBorderColor)
-        oolongButton.setBorder(buttonsBorderWidth, color: buttonsBorderColor)
-        puErhButton.setBorder(buttonsBorderWidth, color: buttonsBorderColor)
-        whiteButton.setBorder(buttonsBorderWidth, color: buttonsBorderColor)
-        stopButton.setBorder(buttonsBorderWidth, color: buttonsBorderColor)
+        blackButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
+        rooibosButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
+        greenButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
+        oolongButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
+        puErhButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
+        whiteButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
+        stopButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
     }
 }
 
 //MARK: IBACTIONS
 extension ViewController {
-    @IBAction func blackButtonClicked(sender: UIButton) {
+    @IBAction func blackButtonClicked(_ sender: UIButton) {
         remainingStopWatchTimeInSeconds =  60 * 5
         setTimer()
     }
-    @IBAction func rooibosButtonClicked(sender: UIButton) {
+    @IBAction func rooibosButtonClicked(_ sender: UIButton) {
         remainingStopWatchTimeInSeconds =  60 * 5
         setTimer()
     }
-    @IBAction func greenButtonClicked(sender: UIButton) {
+    @IBAction func greenButtonClicked(_ sender: UIButton) {
         remainingStopWatchTimeInSeconds =  60 * 3
         setTimer()
     }
-    @IBAction func oolongButtonClicked(sender: UIButton) {
+    @IBAction func oolongButtonClicked(_ sender: UIButton) {
         remainingStopWatchTimeInSeconds =  60 * 3
         setTimer()
     }
-    @IBAction func puErhButtonClicked(sender: UIButton) {
+    @IBAction func puErhButtonClicked(_ sender: UIButton) {
         remainingStopWatchTimeInSeconds =  60 * 5
         setTimer()
     }
-    @IBAction func whiteButtonClicked(sender: UIButton) {
+    @IBAction func whiteButtonClicked(_ sender: UIButton) {
         remainingStopWatchTimeInSeconds =  60 * 4
         setTimer()
     }
-    @IBAction func stopButtonClicked(sender: UIButton) {
+    @IBAction func stopButtonClicked(_ sender: UIButton) {
         remainingStopWatchTimeInSeconds = 0
         endTimer()
         setstopWatchRemainingTimeLabelText()
