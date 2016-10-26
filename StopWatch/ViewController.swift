@@ -178,6 +178,7 @@ extension ViewController {
         setTimer()
     }
     @IBAction func stopButtonClicked(sender: UIButton) {
+        remainingStopWatchTimeInSeconds = 0
         endTimer()
         setstopWatchRemainingTimeLabelText()
     }

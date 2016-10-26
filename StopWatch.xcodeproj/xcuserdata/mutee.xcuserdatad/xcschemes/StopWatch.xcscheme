@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "809FC3351DBE64EF0046A25A"
-               BuildableName = "StopWatch.app"
+               BuildableName = "UppercaseTea.app"
                BlueprintName = "StopWatch"
                ReferencedContainer = "container:StopWatch.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "809FC3351DBE64EF0046A25A"
-            BuildableName = "StopWatch.app"
+            BuildableName = "UppercaseTea.app"
             BlueprintName = "StopWatch"
             ReferencedContainer = "container:StopWatch.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "809FC3351DBE64EF0046A25A"
-            BuildableName = "StopWatch.app"
+            BuildableName = "UppercaseTea.app"
             BlueprintName = "StopWatch"
             ReferencedContainer = "container:StopWatch.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "809FC3351DBE64EF0046A25A"
-            BuildableName = "StopWatch.app"
+            BuildableName = "UppercaseTea.app"
             BlueprintName = "StopWatch"
             ReferencedContainer = "container:StopWatch.xcodeproj">
          </BuildableReference>
