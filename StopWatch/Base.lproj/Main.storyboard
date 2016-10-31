@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1108" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="BauerBodoniStd-Roman.otf">
+            <string>BauerBodoniStd-Roman</string>
+        </array>
+        <array key="NeutraTextBook.otf">
+            <string>NeutraText-Book</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -21,24 +29,24 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="cHw-S4-BAK">
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnZ-uz-FQU">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnZ-uz-FQU">
                                 <constraints>
                                     <constraint firstAttribute="height" constant="86" id="lEI-ip-uyL"/>
                                     <constraint firstAttribute="width" constant="86" id="m1M-Tt-TEm"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="BLACK">
+                                <fontDescription key="fontDescription" name="NeutraText-Book" family="Neutra Text" pointSize="17"/>
+                                <state key="normal" title="WHITE">
                                     <color key="titleColor" red="0.55294117647058827" green="0.50980392156862742" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="blackButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yMt-qh-TIz"/>
+                                    <action selector="whiteButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VOQ-Za-Klo"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="03 : 00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejn-2g-LOj">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejn-2g-LOj">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="8Zg-xh-vDZ"/>
+                                    <constraint firstAttribute="height" constant="94" id="8Zg-xh-vDZ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="81"/>
+                                <fontDescription key="fontDescription" name="BauerBodoniStd-Roman" family="Bauer Bodoni Std 1" pointSize="87"/>
                                 <color key="textColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -47,12 +55,12 @@
                                     <constraint firstAttribute="height" constant="86" id="RYK-ae-yPd"/>
                                     <constraint firstAttribute="width" constant="86" id="zGi-S3-qmc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="GREEN">
+                                <fontDescription key="fontDescription" name="NeutraText-Book" family="Neutra Text" pointSize="17"/>
+                                <state key="normal" title="OOLONG">
                                     <color key="titleColor" red="0.55294117649999996" green="0.50980392159999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="greenButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B4N-5v-inh"/>
+                                    <action selector="oolongButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Btb-Bl-W18"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-yd-FtM">
@@ -60,12 +68,12 @@
                                     <constraint firstAttribute="width" constant="86" id="4NO-oU-b1f"/>
                                     <constraint firstAttribute="height" constant="86" id="FJH-Wc-RbA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="OOLONG">
+                                <fontDescription key="fontDescription" name="NeutraText-Book" family="Neutra Text" pointSize="17"/>
+                                <state key="normal" title="BLACK">
                                     <color key="titleColor" red="0.55294117649999996" green="0.50980392159999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="oolongButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cft-uR-j9e"/>
+                                    <action selector="blackButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ksd-UX-4Da"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6i-NG-guT">
@@ -73,12 +81,12 @@
                                     <constraint firstAttribute="width" constant="86" id="Cie-iZ-XJi"/>
                                     <constraint firstAttribute="height" constant="86" id="arh-zG-cLc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="NeutraText-Book" family="Neutra Text" pointSize="17"/>
                                 <state key="normal" title="PU-ERH">
                                     <color key="titleColor" red="0.55294117649999996" green="0.50980392159999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="puErhButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hpq-uR-HA9"/>
+                                    <action selector="puErhButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o8L-A2-FrP"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOf-Ng-dsE">
@@ -86,12 +94,12 @@
                                     <constraint firstAttribute="width" constant="86" id="2bY-5Z-euN"/>
                                     <constraint firstAttribute="height" constant="86" id="8zC-P8-h0G"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="WHITE">
+                                <fontDescription key="fontDescription" name="NeutraText-Book" family="Neutra Text" pointSize="17"/>
+                                <state key="normal" title="ROOIBOS">
                                     <color key="titleColor" red="0.55294117649999996" green="0.50980392159999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="whiteButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vpa-XD-ypJ"/>
+                                    <action selector="rooibosButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BmN-vk-umL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vl4-pn-HTg">
@@ -99,12 +107,12 @@
                                     <constraint firstAttribute="width" constant="86" id="KCx-eH-3QE"/>
                                     <constraint firstAttribute="height" constant="86" id="dQT-IZ-0Oy"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="STOP">
+                                <fontDescription key="fontDescription" name="NeutraText-Book" family="Neutra Text" pointSize="17"/>
+                                <state key="normal">
                                     <color key="titleColor" red="0.55294117649999996" green="0.50980392159999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="stopButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K2T-ki-pSe"/>
+                                    <action selector="stopButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ach-2b-wse"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anj-KK-snW">
@@ -112,12 +120,12 @@
                                     <constraint firstAttribute="width" constant="86" id="0Rr-5h-u0X"/>
                                     <constraint firstAttribute="height" constant="86" id="PVa-AR-DCD"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="ROOIBOS">
+                                <fontDescription key="fontDescription" name="NeutraText-Book" family="Neutra Text" pointSize="17"/>
+                                <state key="normal" title="GREEN">
                                     <color key="titleColor" red="0.55294117649999996" green="0.50980392159999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="rooibosButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0Yj-3D-yVi"/>
+                                    <action selector="greenButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eZG-hY-fdh"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="Rza-wJ-9hy">
@@ -126,12 +134,17 @@
                                     <constraint firstAttribute="width" constant="96" id="kJ9-zM-iIh"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="START/STOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LCK-dx-n81">
+                                <fontDescription key="fontDescription" name="NeutraText-Book" family="Neutra Text" pointSize="19"/>
+                                <color key="textColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="vl4-pn-HTg" firstAttribute="top" secondItem="B6i-NG-guT" secondAttribute="bottom" constant="15" id="6gB-Fy-Mnn"/>
                             <constraint firstItem="B6i-NG-guT" firstAttribute="top" secondItem="anj-KK-snW" secondAttribute="bottom" constant="15" id="Cy9-52-b0z"/>
-                            <constraint firstItem="CuU-Xz-fBn" firstAttribute="top" secondItem="ejn-2g-LOj" secondAttribute="bottom" constant="21" id="ENU-rA-Ns7"/>
+                            <constraint firstItem="CuU-Xz-fBn" firstAttribute="top" secondItem="ejn-2g-LOj" secondAttribute="bottom" constant="-2" id="ENU-rA-Ns7"/>
                             <constraint firstItem="cHw-S4-BAK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EOa-eg-okO"/>
                             <constraint firstItem="FnZ-uz-FQU" firstAttribute="top" secondItem="anj-KK-snW" secondAttribute="top" id="Ekc-rY-jQS"/>
                             <constraint firstItem="CuU-Xz-fBn" firstAttribute="top" secondItem="anj-KK-snW" secondAttribute="top" id="F1o-3V-ysT"/>
@@ -141,33 +154,38 @@
                             <constraint firstAttribute="trailing" secondItem="cHw-S4-BAK" secondAttribute="trailing" id="JGq-Iu-C1h"/>
                             <constraint firstItem="lOf-Ng-dsE" firstAttribute="top" secondItem="CuU-Xz-fBn" secondAttribute="bottom" constant="15" id="QfZ-hn-owy"/>
                             <constraint firstItem="CuU-Xz-fBn" firstAttribute="leading" secondItem="anj-KK-snW" secondAttribute="trailing" constant="15" id="SBJ-Zy-pZw"/>
+                            <constraint firstItem="LCK-dx-n81" firstAttribute="leading" secondItem="vl4-pn-HTg" secondAttribute="leading" id="ToJ-di-Pbr"/>
                             <constraint firstItem="anj-KK-snW" firstAttribute="leading" secondItem="FnZ-uz-FQU" secondAttribute="trailing" constant="15" id="U4W-TH-7uL"/>
                             <constraint firstItem="mCa-yd-FtM" firstAttribute="top" secondItem="FnZ-uz-FQU" secondAttribute="bottom" constant="15" id="VnG-Nw-vb5"/>
-                            <constraint firstItem="ejn-2g-LOj" firstAttribute="top" secondItem="Rza-wJ-9hy" secondAttribute="bottom" constant="21" id="ZhU-J9-9kg"/>
+                            <constraint firstItem="ejn-2g-LOj" firstAttribute="top" secondItem="Rza-wJ-9hy" secondAttribute="bottom" constant="12" id="ZhU-J9-9kg"/>
                             <constraint firstItem="B6i-NG-guT" firstAttribute="leading" secondItem="mCa-yd-FtM" secondAttribute="trailing" constant="15" id="aDn-bX-Xmc"/>
                             <constraint firstAttribute="trailing" secondItem="ejn-2g-LOj" secondAttribute="trailing" id="bX0-Lw-4zN"/>
                             <constraint firstItem="lOf-Ng-dsE" firstAttribute="leading" secondItem="B6i-NG-guT" secondAttribute="trailing" constant="15" id="csl-bO-Avx"/>
                             <constraint firstItem="anj-KK-snW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hBR-sQ-ybA"/>
                             <constraint firstItem="cHw-S4-BAK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="hcl-5x-MNG"/>
+                            <constraint firstItem="LCK-dx-n81" firstAttribute="top" secondItem="vl4-pn-HTg" secondAttribute="top" id="j9Z-cu-gv8"/>
                             <constraint firstItem="Rza-wJ-9hy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jJo-iN-LNx"/>
+                            <constraint firstItem="LCK-dx-n81" firstAttribute="trailing" secondItem="vl4-pn-HTg" secondAttribute="trailing" id="lrk-hT-0Fm"/>
+                            <constraint firstItem="LCK-dx-n81" firstAttribute="bottom" secondItem="vl4-pn-HTg" secondAttribute="bottom" id="osi-gb-hlb"/>
                             <constraint firstItem="vl4-pn-HTg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="t6K-fw-dvo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cHw-S4-BAK" secondAttribute="bottom" id="z0z-I3-qwp"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="blackButton" destination="FnZ-uz-FQU" id="vMG-Te-ncS"/>
-                        <outlet property="greenButton" destination="CuU-Xz-fBn" id="ONp-Tx-qC9"/>
-                        <outlet property="oolongButton" destination="mCa-yd-FtM" id="Q4S-os-xid"/>
-                        <outlet property="puErhButton" destination="B6i-NG-guT" id="syV-Sf-qAn"/>
-                        <outlet property="rooibosButton" destination="anj-KK-snW" id="hDJ-4M-jGG"/>
-                        <outlet property="stopButton" destination="vl4-pn-HTg" id="f48-Oh-9Bx"/>
+                        <outlet property="blackButton" destination="mCa-yd-FtM" id="h4X-Yy-Jjh"/>
+                        <outlet property="greenButton" destination="anj-KK-snW" id="ryC-D6-7ef"/>
+                        <outlet property="oolongButton" destination="CuU-Xz-fBn" id="pqM-IV-8Ly"/>
+                        <outlet property="puErhButton" destination="B6i-NG-guT" id="2Fv-Ag-9ab"/>
+                        <outlet property="rooibosButton" destination="lOf-Ng-dsE" id="j5N-qd-pwk"/>
+                        <outlet property="startStopLabel" destination="LCK-dx-n81" id="iJB-lA-lbd"/>
+                        <outlet property="stopButton" destination="vl4-pn-HTg" id="92T-vQ-xZr"/>
                         <outlet property="stopWatchRemainingTimeLabel" destination="ejn-2g-LOj" id="h75-Ao-Dab"/>
-                        <outlet property="whiteButton" destination="lOf-Ng-dsE" id="8MA-xc-4a7"/>
+                        <outlet property="whiteButton" destination="FnZ-uz-FQU" id="w6t-vp-jat"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="328" y="352"/>
+            <point key="canvasLocation" x="326.25" y="351.76056338028167"/>
         </scene>
     </scenes>
     <resources>

@@ -13,6 +13,16 @@
 		809FC33F1DBE64EF0046A25A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809FC33D1DBE64EF0046A25A /* Main.storyboard */; };
 		809FC3411DBE64EF0046A25A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 809FC3401DBE64EF0046A25A /* Assets.xcassets */; };
 		809FC3441DBE64F00046A25A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809FC3421DBE64F00046A25A /* LaunchScreen.storyboard */; };
+		80AB0E1B1DC76EDE00FBE49B /* BauerBodoniStd-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80AB0E121DC76EDE00FBE49B /* BauerBodoniStd-Bold.otf */; };
+		80AB0E1C1DC76EDE00FBE49B /* BauerBodoniStd-BoldItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80AB0E131DC76EDE00FBE49B /* BauerBodoniStd-BoldItalic.otf */; };
+		80AB0E1D1DC76EDE00FBE49B /* BauerBodoniStd-Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80AB0E141DC76EDE00FBE49B /* BauerBodoniStd-Italic.otf */; };
+		80AB0E1E1DC76EDE00FBE49B /* BauerBodoniStd-Roman.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80AB0E151DC76EDE00FBE49B /* BauerBodoniStd-Roman.otf */; };
+		80AB0E1F1DC76EDE00FBE49B /* NeutraTextBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80AB0E161DC76EDE00FBE49B /* NeutraTextBold.otf */; };
+		80AB0E201DC76EDE00FBE49B /* NeutraTextBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80AB0E171DC76EDE00FBE49B /* NeutraTextBook.otf */; };
+		80AB0E211DC76EDE00FBE49B /* NeutraTextDemi.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80AB0E181DC76EDE00FBE49B /* NeutraTextDemi.otf */; };
+		80AB0E221DC76EDE00FBE49B /* NeutraTextLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80AB0E191DC76EDE00FBE49B /* NeutraTextLight.otf */; };
+		80AB0E231DC76EDE00FBE49B /* NeutraTextTFBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 80AB0E1A1DC76EDE00FBE49B /* NeutraTextTFBold.otf */; };
+		80AB0E261DC7764300FBE49B /* AppStringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB0E251DC7764300FBE49B /* AppStringConstants.swift */; };
 		80C299581DBF8A6700900C63 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80C299571DBF8A6700900C63 /* AVFoundation.framework */; };
 		80C2995A1DBF904E00900C63 /* beep21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 80C299591DBF904E00900C63 /* beep21.mp3 */; };
 		80C299611DBF9ABA00900C63 /* UIButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80C299601DBF9ABA00900C63 /* UIButtonExtension.swift */; };
@@ -28,6 +38,16 @@
 		809FC3401DBE64EF0046A25A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		809FC3431DBE64F00046A25A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		809FC3451DBE64F00046A25A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		80AB0E121DC76EDE00FBE49B /* BauerBodoniStd-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BauerBodoniStd-Bold.otf"; sourceTree = "<group>"; };
+		80AB0E131DC76EDE00FBE49B /* BauerBodoniStd-BoldItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BauerBodoniStd-BoldItalic.otf"; sourceTree = "<group>"; };
+		80AB0E141DC76EDE00FBE49B /* BauerBodoniStd-Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BauerBodoniStd-Italic.otf"; sourceTree = "<group>"; };
+		80AB0E151DC76EDE00FBE49B /* BauerBodoniStd-Roman.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BauerBodoniStd-Roman.otf"; sourceTree = "<group>"; };
+		80AB0E161DC76EDE00FBE49B /* NeutraTextBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeutraTextBold.otf; sourceTree = "<group>"; };
+		80AB0E171DC76EDE00FBE49B /* NeutraTextBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeutraTextBook.otf; sourceTree = "<group>"; };
+		80AB0E181DC76EDE00FBE49B /* NeutraTextDemi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeutraTextDemi.otf; sourceTree = "<group>"; };
+		80AB0E191DC76EDE00FBE49B /* NeutraTextLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeutraTextLight.otf; sourceTree = "<group>"; };
+		80AB0E1A1DC76EDE00FBE49B /* NeutraTextTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeutraTextTFBold.otf; sourceTree = "<group>"; };
+		80AB0E251DC7764300FBE49B /* AppStringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringConstants.swift; sourceTree = "<group>"; };
 		80C299571DBF8A6700900C63 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		80C299591DBF904E00900C63 /* beep21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep21.mp3; sourceTree = "<group>"; };
 		80C299601DBF9ABA00900C63 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -76,6 +96,8 @@
 		809FC3381DBE64EF0046A25A /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				80AB0E241DC7764300FBE49B /* Misc */,
+				80AB0E111DC76EDE00FBE49B /* FONTS */,
 				80C299621DBFA94400900C63 /* Utils */,
 				80C2995F1DBF9AA700900C63 /* Extensions */,
 				809FC3391DBE64EF0046A25A /* AppDelegate.swift */,
@@ -87,6 +109,30 @@
 				809FC3451DBE64F00046A25A /* Info.plist */,
 			);
 			path = StopWatch;
+			sourceTree = "<group>";
+		};
+		80AB0E111DC76EDE00FBE49B /* FONTS */ = {
+			isa = PBXGroup;
+			children = (
+				80AB0E121DC76EDE00FBE49B /* BauerBodoniStd-Bold.otf */,
+				80AB0E131DC76EDE00FBE49B /* BauerBodoniStd-BoldItalic.otf */,
+				80AB0E141DC76EDE00FBE49B /* BauerBodoniStd-Italic.otf */,
+				80AB0E151DC76EDE00FBE49B /* BauerBodoniStd-Roman.otf */,
+				80AB0E161DC76EDE00FBE49B /* NeutraTextBold.otf */,
+				80AB0E171DC76EDE00FBE49B /* NeutraTextBook.otf */,
+				80AB0E181DC76EDE00FBE49B /* NeutraTextDemi.otf */,
+				80AB0E191DC76EDE00FBE49B /* NeutraTextLight.otf */,
+				80AB0E1A1DC76EDE00FBE49B /* NeutraTextTFBold.otf */,
+			);
+			path = FONTS;
+			sourceTree = "<group>";
+		};
+		80AB0E241DC7764300FBE49B /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				80AB0E251DC7764300FBE49B /* AppStringConstants.swift */,
+			);
+			path = Misc;
 			sourceTree = "<group>";
 		};
 		80C2995F1DBF9AA700900C63 /* Extensions */ = {
@@ -137,8 +183,8 @@
 				TargetAttributes = {
 					809FC3351DBE64EF0046A25A = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = QJWYED6AB8;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -166,9 +212,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				809FC3441DBE64F00046A25A /* LaunchScreen.storyboard in Resources */,
+				80AB0E1F1DC76EDE00FBE49B /* NeutraTextBold.otf in Resources */,
+				80AB0E221DC76EDE00FBE49B /* NeutraTextLight.otf in Resources */,
+				80AB0E201DC76EDE00FBE49B /* NeutraTextBook.otf in Resources */,
 				809FC3411DBE64EF0046A25A /* Assets.xcassets in Resources */,
+				80AB0E231DC76EDE00FBE49B /* NeutraTextTFBold.otf in Resources */,
+				80AB0E211DC76EDE00FBE49B /* NeutraTextDemi.otf in Resources */,
 				809FC33F1DBE64EF0046A25A /* Main.storyboard in Resources */,
+				80AB0E1C1DC76EDE00FBE49B /* BauerBodoniStd-BoldItalic.otf in Resources */,
+				80AB0E1B1DC76EDE00FBE49B /* BauerBodoniStd-Bold.otf in Resources */,
 				80C2995A1DBF904E00900C63 /* beep21.mp3 in Resources */,
+				80AB0E1E1DC76EDE00FBE49B /* BauerBodoniStd-Roman.otf in Resources */,
+				80AB0E1D1DC76EDE00FBE49B /* BauerBodoniStd-Italic.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +236,7 @@
 			files = (
 				809FC33C1DBE64EF0046A25A /* ViewController.swift in Sources */,
 				809FC33A1DBE64EF0046A25A /* AppDelegate.swift in Sources */,
+				80AB0E261DC7764300FBE49B /* AppStringConstants.swift in Sources */,
 				80C299611DBF9ABA00900C63 /* UIButtonExtension.swift in Sources */,
 				80C299641DBFA94F00900C63 /* AppUtils.swift in Sources */,
 			);
@@ -302,7 +358,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = StopWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -319,14 +376,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = QJWYED6AB8;
 				INFOPLIST_FILE = StopWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = uwg.United;
 				PRODUCT_NAME = UppercaseTea;
-				PROVISIONING_PROFILE = "7fcca7ea-8976-42c8-ba77-f59750003c14";
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "72a0a64b-d3f9-4bd6-be80-18becc6dc68c";
+				PROVISIONING_PROFILE_SPECIFIER = "United App Adhoc";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

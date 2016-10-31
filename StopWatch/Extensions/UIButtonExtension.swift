@@ -8,7 +8,7 @@
 
 import UIKit
 import QuartzCore
-extension UIButton {
+extension UIView {
     func makeRound() {
         if self.frame.size.width == self.frame.size.height {
             self.layer.cornerRadius = self.frame.size.width/2
@@ -17,5 +17,14 @@ extension UIButton {
     func setBorder(width: Float, color: UIColor) {
         self.layer.borderWidth = CGFloat(width)
         self.layer.borderColor = color.cgColor
+    }
+    func setBorder(width: Float, colorIfNotEuqalToSelected normalColor: UIColor, colorIfEqualToSelected selectedColor: UIColor, selectedView: UIView?) {
+        if selectedView != nil && self == selectedView {
+            setBorder(width: width, color: selectedColor)
+        }
+        else {
+            setBorder(width: width, color: normalColor)
+        }
+        
     }
 }

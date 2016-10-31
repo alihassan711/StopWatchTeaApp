@@ -12,7 +12,6 @@ import AVFoundation
 //MARK: VIEW COTROLLER
 class ViewController: UIViewController {
 
-    
     //MARK: IBOutlets
     @IBOutlet weak var stopWatchRemainingTimeLabel: UILabel!
     @IBOutlet weak var blackButton: UIButton!
@@ -22,17 +21,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var puErhButton: UIButton!
     @IBOutlet weak var whiteButton: UIButton!
     @IBOutlet weak var stopButton: UIButton!
+    @IBOutlet weak var startStopLabel: UILabel!
 
     //MARK: Properties
     var remainingStopWatchTimeInSeconds : Int = 0
     var timer: Timer!
-    let buttonsBorderColor = UIColor.init(red: 141.0/255.0, green: 130.0/255.0, blue: 86.0/255.0, alpha: 1.0)
+    let goldenColor = UIColor.init(red: 141.0/255.0, green: 130.0/255.0, blue: 86.0/255.0, alpha: 1.0)
+    let grayColor = UIColor.init(red: 48.0/255.0, green: 48.0/255.0, blue: 48.0/255.0, alpha: 1.0)
     let buttonsBorderWidth: Float = 2.0
-   
+    var selectedButton: UIButton!
 
     //MARK: View Controller Life Cycle
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        self.view.layoutIfNeeded()
     }
     override func viewWillAppear(_ animated: Bool) {
         //Remove from notifications if already added as an observer.
@@ -53,9 +56,21 @@ class ViewController: UIViewController {
 extension ViewController {
     func setTimer() {
         endTimer()
+        startStopLabel.text = AppStringConstants.StopText
+        setButtonsText()
+        setBordersOfAllButtons()
+        selectedButton.setTitleColor(grayColor, for: UIControlState.normal)
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.timerUpdated), userInfo: nil, repeats: true)
     }
     func endTimer() {
+        if selectedButton == nil {
+            setBordersOfAllButtons()
+            setButtonsText()
+            startStopLabel.text = AppStringConstants.StartStopText
+        }
+        else {
+            startStopLabel.text = AppStringConstants.StartText
+        }
         if timer != nil {
             timer.invalidate()
             timer = nil
@@ -65,6 +80,9 @@ extension ViewController {
         remainingStopWatchTimeInSeconds -= 1
         if remainingStopWatchTimeInSeconds <= 0 {
             remainingStopWatchTimeInSeconds = 0
+            
+            selectedButton = nil
+           
             //invalidate timer
             endTimer()
             //set label
@@ -77,13 +95,11 @@ extension ViewController {
             setstopWatchRemainingTimeLabelText()
         }
     }
-    
     func setstopWatchRemainingTimeLabelText() {
         let minutes: Int = remainingStopWatchTimeInSeconds/60
         let seconds: Int = remainingStopWatchTimeInSeconds%60
-        stopWatchRemainingTimeLabel.text = String(format: "%02d : %02d", minutes, seconds)
+        stopWatchRemainingTimeLabel.text = String(format: "%02d:%02d", minutes, seconds)
     }
-
 }
 
 //MARK: HANDLE APP STATUS NOTIFICATIONS
@@ -133,7 +149,6 @@ extension ViewController {
 //MARK: UI SETTINGS
 extension ViewController {
     func makeAllButtonsRound() {
-        
         blackButton.makeRound()
         rooibosButton.makeRound()
         greenButton.makeRound()
@@ -141,48 +156,68 @@ extension ViewController {
         puErhButton.makeRound()
         whiteButton.makeRound()
         stopButton.makeRound()
+        startStopLabel.makeRound()
     }
     func setBordersOfAllButtons() {
-        blackButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
-        rooibosButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
-        greenButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
-        oolongButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
-        puErhButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
-        whiteButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
-        stopButton.setBorder(width: buttonsBorderWidth, color: buttonsBorderColor)
+        blackButton.setBorder(width: buttonsBorderWidth, colorIfNotEuqalToSelected: goldenColor, colorIfEqualToSelected: grayColor, selectedView: selectedButton)
+        rooibosButton.setBorder(width: buttonsBorderWidth, colorIfNotEuqalToSelected: goldenColor, colorIfEqualToSelected: grayColor, selectedView: selectedButton)
+        greenButton.setBorder(width: buttonsBorderWidth, colorIfNotEuqalToSelected: goldenColor, colorIfEqualToSelected: grayColor, selectedView: selectedButton)
+        oolongButton.setBorder(width: buttonsBorderWidth, colorIfNotEuqalToSelected: goldenColor, colorIfEqualToSelected: grayColor, selectedView: selectedButton)
+        puErhButton.setBorder(width: buttonsBorderWidth, colorIfNotEuqalToSelected: goldenColor, colorIfEqualToSelected: grayColor, selectedView: selectedButton)
+        whiteButton.setBorder(width: buttonsBorderWidth, colorIfNotEuqalToSelected: goldenColor, colorIfEqualToSelected: grayColor, selectedView: selectedButton)
+        stopButton.setBorder(width: buttonsBorderWidth, color: grayColor)
+    }
+    func setButtonsText() {
+        blackButton.setTitleColor(goldenColor, for: UIControlState.normal)
+        rooibosButton.setTitleColor(goldenColor, for: UIControlState.normal)
+        greenButton.setTitleColor(goldenColor, for: UIControlState.normal)
+        oolongButton.setTitleColor(goldenColor, for: UIControlState.normal)
+        puErhButton.setTitleColor(goldenColor, for: UIControlState.normal)
+        whiteButton.setTitleColor(goldenColor, for: UIControlState.normal)
+        stopButton.setTitleColor(grayColor, for: UIControlState.normal)
     }
 }
 
 //MARK: IBACTIONS
 extension ViewController {
     @IBAction func blackButtonClicked(_ sender: UIButton) {
+        selectedButton = blackButton
         remainingStopWatchTimeInSeconds =  60 * 5
         setTimer()
     }
     @IBAction func rooibosButtonClicked(_ sender: UIButton) {
+        selectedButton = rooibosButton
         remainingStopWatchTimeInSeconds =  60 * 5
         setTimer()
     }
     @IBAction func greenButtonClicked(_ sender: UIButton) {
+        selectedButton = greenButton
         remainingStopWatchTimeInSeconds =  60 * 3
         setTimer()
     }
     @IBAction func oolongButtonClicked(_ sender: UIButton) {
+        selectedButton = oolongButton
         remainingStopWatchTimeInSeconds =  60 * 3
         setTimer()
     }
     @IBAction func puErhButtonClicked(_ sender: UIButton) {
+        selectedButton = puErhButton
         remainingStopWatchTimeInSeconds =  60 * 5
         setTimer()
     }
     @IBAction func whiteButtonClicked(_ sender: UIButton) {
+        selectedButton = whiteButton
         remainingStopWatchTimeInSeconds =  60 * 4
         setTimer()
     }
     @IBAction func stopButtonClicked(_ sender: UIButton) {
-        remainingStopWatchTimeInSeconds = 0
-        endTimer()
-        setstopWatchRemainingTimeLabelText()
+        if timer != nil && timer.isValid {
+            endTimer()
+            setstopWatchRemainingTimeLabelText()
+        }
+        else if selectedButton != nil {
+            setTimer()
+        }
     }
 }
 

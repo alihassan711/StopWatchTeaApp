@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>BauerBodoniStd-Bold.otf</string>
+		<string>BauerBodoniStd-BoldItalic.otf</string>
+		<string>BauerBodoniStd-Italic.otf</string>
+		<string>BauerBodoniStd-Roman.otf</string>
+		<string>NeutraTextBold.otf</string>
+		<string>NeutraTextBook.otf</string>
+		<string>NeutraTextDemi.otf</string>
+		<string>NeutraTextLight.otf</string>
+		<string>NeutraTextTFBold.otf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
