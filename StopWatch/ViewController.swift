@@ -56,6 +56,7 @@ class ViewController: UIViewController {
 extension ViewController {
     func setTimer() {
         endTimer()
+        setstopWatchRemainingTimeLabelText()
         startStopLabel.text = AppStringConstants.StopText
         setButtonsText()
         setBordersOfAllButtons()

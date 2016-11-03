@@ -44,9 +44,9 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejn-2g-LOj">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="94" id="8Zg-xh-vDZ"/>
+                                    <constraint firstAttribute="height" constant="97" id="YCf-BK-uFr"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="BauerBodoniStd-Roman" family="Bauer Bodoni Std 1" pointSize="87"/>
+                                <fontDescription key="fontDescription" name="BauerBodoniStd-Roman" family="Bauer Bodoni Std 1" pointSize="97"/>
                                 <color key="textColor" red="0.18823529411764706" green="0.18823529411764706" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -142,6 +142,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Rza-wJ-9hy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="4RN-iB-y63"/>
                             <constraint firstItem="vl4-pn-HTg" firstAttribute="top" secondItem="B6i-NG-guT" secondAttribute="bottom" constant="15" id="6gB-Fy-Mnn"/>
                             <constraint firstItem="B6i-NG-guT" firstAttribute="top" secondItem="anj-KK-snW" secondAttribute="bottom" constant="15" id="Cy9-52-b0z"/>
                             <constraint firstItem="CuU-Xz-fBn" firstAttribute="top" secondItem="ejn-2g-LOj" secondAttribute="bottom" constant="-2" id="ENU-rA-Ns7"/>
@@ -157,7 +158,6 @@
                             <constraint firstItem="LCK-dx-n81" firstAttribute="leading" secondItem="vl4-pn-HTg" secondAttribute="leading" id="ToJ-di-Pbr"/>
                             <constraint firstItem="anj-KK-snW" firstAttribute="leading" secondItem="FnZ-uz-FQU" secondAttribute="trailing" constant="15" id="U4W-TH-7uL"/>
                             <constraint firstItem="mCa-yd-FtM" firstAttribute="top" secondItem="FnZ-uz-FQU" secondAttribute="bottom" constant="15" id="VnG-Nw-vb5"/>
-                            <constraint firstItem="ejn-2g-LOj" firstAttribute="top" secondItem="Rza-wJ-9hy" secondAttribute="bottom" constant="12" id="ZhU-J9-9kg"/>
                             <constraint firstItem="B6i-NG-guT" firstAttribute="leading" secondItem="mCa-yd-FtM" secondAttribute="trailing" constant="15" id="aDn-bX-Xmc"/>
                             <constraint firstAttribute="trailing" secondItem="ejn-2g-LOj" secondAttribute="trailing" id="bX0-Lw-4zN"/>
                             <constraint firstItem="lOf-Ng-dsE" firstAttribute="leading" secondItem="B6i-NG-guT" secondAttribute="trailing" constant="15" id="csl-bO-Avx"/>
