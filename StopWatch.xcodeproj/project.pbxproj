@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		807A602A1DC11294000396C1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 807A60291DC11294000396C1 /* CoreGraphics.framework */; };
+		8096B00D1DCC9D35000893BF /* radar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8096B00C1DCC9D35000893BF /* radar.mp3 */; };
 		809FC33A1DBE64EF0046A25A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809FC3391DBE64EF0046A25A /* AppDelegate.swift */; };
 		809FC33C1DBE64EF0046A25A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 809FC33B1DBE64EF0046A25A /* ViewController.swift */; };
 		809FC33F1DBE64EF0046A25A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 809FC33D1DBE64EF0046A25A /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		807A60291DC11294000396C1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8096B00C1DCC9D35000893BF /* radar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = radar.mp3; sourceTree = "<group>"; };
 		809FC3361DBE64EF0046A25A /* UppercaseTea.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UppercaseTea.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		809FC3391DBE64EF0046A25A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		809FC33B1DBE64EF0046A25A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 				809FC33B1DBE64EF0046A25A /* ViewController.swift */,
 				809FC33D1DBE64EF0046A25A /* Main.storyboard */,
 				80C299591DBF904E00900C63 /* beep21.mp3 */,
+				8096B00C1DCC9D35000893BF /* radar.mp3 */,
 				809FC3401DBE64EF0046A25A /* Assets.xcassets */,
 				809FC3421DBE64F00046A25A /* LaunchScreen.storyboard */,
 				809FC3451DBE64F00046A25A /* Info.plist */,
@@ -225,6 +228,7 @@
 				80C2995A1DBF904E00900C63 /* beep21.mp3 in Resources */,
 				80AB0E1E1DC76EDE00FBE49B /* BauerBodoniStd-Roman.otf in Resources */,
 				80AB0E1D1DC76EDE00FBE49B /* BauerBodoniStd-Italic.otf in Resources */,
+				8096B00D1DCC9D35000893BF /* radar.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,7 +10,7 @@ import Foundation
 
 struct AppStringConstants {
    
-    static let StartStopText = "START/STOP"
+    static let StartStopText = "STOP"
     static let StartText = "START"
     static let StopText = "STOP"
 }

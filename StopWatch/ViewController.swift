@@ -27,15 +27,17 @@ class ViewController: UIViewController {
     var remainingStopWatchTimeInSeconds : Int = 0
     var timer: Timer!
     let goldenColor = UIColor.init(red: 141.0/255.0, green: 130.0/255.0, blue: 86.0/255.0, alpha: 1.0)
-    let grayColor = UIColor.init(red: 48.0/255.0, green: 48.0/255.0, blue: 48.0/255.0, alpha: 1.0)
+    let grayColor = UIColor.init(red: 100.0/255.0, green: 100.0/255.0, blue: 100.0/255.0, alpha: 1.0)
     let buttonsBorderWidth: Float = 2.0
     var selectedButton: UIButton!
-
+    var audioPlayer: AVAudioPlayer!
+    
     //MARK: View Controller Life Cycle
     override func viewDidLoad() {
         
         super.viewDidLoad()
         self.view.layoutIfNeeded()
+        initializeAudioPlayer()
     }
     override func viewWillAppear(_ animated: Bool) {
         //Remove from notifications if already added as an observer.
@@ -58,7 +60,7 @@ extension ViewController {
         endTimer()
         setstopWatchRemainingTimeLabelText()
         startStopLabel.text = AppStringConstants.StopText
-        setButtonsText()
+        setTextColors()
         setBordersOfAllButtons()
         selectedButton.setTitleColor(grayColor, for: UIControlState.normal)
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.timerUpdated), userInfo: nil, repeats: true)
@@ -66,7 +68,7 @@ extension ViewController {
     func endTimer() {
         if selectedButton == nil {
             setBordersOfAllButtons()
-            setButtonsText()
+            setTextColors()
             startStopLabel.text = AppStringConstants.StartStopText
         }
         else {
@@ -89,8 +91,9 @@ extension ViewController {
             //set label
             setstopWatchRemainingTimeLabelText()
             //beep
-            let systemSoundID: SystemSoundID = 1016
-            AudioServicesPlaySystemSound(systemSoundID)
+            playAudio()
+//            let systemSoundID: SystemSoundID = 1016
+//            AudioServicesPlaySystemSound(systemSoundID)
         }
         else {
             setstopWatchRemainingTimeLabelText()
@@ -142,7 +145,7 @@ extension ViewController {
         AppUtils.removeAllLocalNotifications()
       
         let notificationScheduleDate = Date(timeIntervalSinceNow: TimeInterval(remainingStopWatchTimeInSeconds) )
-        AppUtils.scheduleLocalNotification(notificationScheduleDate, alertBody: "Time Up", alertAction: "be awesome!", soundName: "beep21.mp3", userInfo: ["CustomField1": "w00t" as AnyObject])
+        AppUtils.scheduleLocalNotification(notificationScheduleDate, alertBody: "Your Tea is Ready. Enjoy.", alertAction: "be awesome!", soundName: "radar.mp3", userInfo: ["CustomField1": "w00t" as AnyObject])
     }
 
 }
@@ -168,7 +171,7 @@ extension ViewController {
         whiteButton.setBorder(width: buttonsBorderWidth, colorIfNotEuqalToSelected: goldenColor, colorIfEqualToSelected: grayColor, selectedView: selectedButton)
         stopButton.setBorder(width: buttonsBorderWidth, color: grayColor)
     }
-    func setButtonsText() {
+    func setTextColors() {
         blackButton.setTitleColor(goldenColor, for: UIControlState.normal)
         rooibosButton.setTitleColor(goldenColor, for: UIControlState.normal)
         greenButton.setTitleColor(goldenColor, for: UIControlState.normal)
@@ -176,6 +179,31 @@ extension ViewController {
         puErhButton.setTitleColor(goldenColor, for: UIControlState.normal)
         whiteButton.setTitleColor(goldenColor, for: UIControlState.normal)
         stopButton.setTitleColor(grayColor, for: UIControlState.normal)
+        stopWatchRemainingTimeLabel.textColor = grayColor
+    }
+}
+
+//MARK: FOREGROUND AUDIO
+extension ViewController {
+    func initializeAudioPlayer() {
+        let path = Bundle.main.path(forResource: "radar", ofType:"mp3")!
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOf: url)
+        }
+        catch{
+            
+        }
+
+    }
+    func playAudio() {
+        audioPlayer.numberOfLoops = -1
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+    }
+    func stopAudio() {
+        audioPlayer.stop()
     }
 }
 
@@ -199,6 +227,8 @@ extension ViewController {
     @IBAction func oolongButtonClicked(_ sender: UIButton) {
         selectedButton = oolongButton
         remainingStopWatchTimeInSeconds =  60 * 3
+        remainingStopWatchTimeInSeconds =  5
+
         setTimer()
     }
     @IBAction func puErhButtonClicked(_ sender: UIButton) {
@@ -212,6 +242,8 @@ extension ViewController {
         setTimer()
     }
     @IBAction func stopButtonClicked(_ sender: UIButton) {
+        stopAudio()
+        AppUtils.removeAllLocalNotifications()
         if timer != nil && timer.isValid {
             endTimer()
             setstopWatchRemainingTimeLabelText()
