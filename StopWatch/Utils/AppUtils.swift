@@ -19,12 +19,26 @@ class AppUtils {
 
     }
     class func scheduleLocalNotification(_ fireDate: Date, alertBody: String, alertAction: String, soundName: String, userInfo: [String: AnyObject] ) {
-        let notification = UILocalNotification()
-        notification.fireDate = fireDate
-        notification.alertBody = alertBody
-        notification.alertAction = alertAction
-        notification.soundName = soundName
-        notification.userInfo = userInfo
-        UIApplication.shared.scheduleLocalNotification(notification)
+        
+        var index = 0
+        while index < 10 {
+            let fireDateCopy = fireDate.addingTimeInterval(Double(index)*3.0)
+
+            let notification = UILocalNotification()
+            notification.fireDate = fireDateCopy
+            if index == 0 {
+                notification.alertBody = alertBody
+            }
+            else {
+                notification.alertBody = ""
+            }
+            notification.alertAction = alertAction
+            notification.soundName = soundName
+            notification.userInfo = userInfo
+            UIApplication.shared.scheduleLocalNotification(notification)
+            index += 1
+
+        }
+
     }
 }

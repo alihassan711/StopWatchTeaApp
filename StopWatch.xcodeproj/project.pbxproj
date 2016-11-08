@@ -188,7 +188,7 @@
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = C7AX7RQ24V;
 						LastSwiftMigration = 0800;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -370,8 +370,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = idzyns.alburraq.squaresking;
 				PRODUCT_NAME = UppercaseTea;
-				PROVISIONING_PROFILE = "d09d778b-171a-4c3a-9963-d852933c81bb";
-				PROVISIONING_PROFILE_SPECIFIER = "iiDzyns Provisioning Profile";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -381,15 +381,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = C7AX7RQ24V;
 				INFOPLIST_FILE = StopWatch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = idzyns.alburraq.squaresking;
 				PRODUCT_NAME = UppercaseTea;
-				PROVISIONING_PROFILE = "a42b9aa7-0f86-4967-bcef-cb669a096b5c";
-				PROVISIONING_PROFILE_SPECIFIER = SquaresKingAdhocProfile;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

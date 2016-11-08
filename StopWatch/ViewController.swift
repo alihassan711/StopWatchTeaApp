@@ -58,21 +58,19 @@ class ViewController: UIViewController {
 extension ViewController {
     func setTimer() {
         endTimer()
+        stopAudio()
         setstopWatchRemainingTimeLabelText()
-        startStopLabel.text = AppStringConstants.StopText
         setTextColors()
         setBordersOfAllButtons()
-        selectedButton.setTitleColor(grayColor, for: UIControlState.normal)
+        selectedButton?.setTitleColor(grayColor, for: UIControlState.normal)
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(ViewController.timerUpdated), userInfo: nil, repeats: true)
     }
     func endTimer() {
         if selectedButton == nil {
             setBordersOfAllButtons()
             setTextColors()
-            startStopLabel.text = AppStringConstants.StartStopText
         }
         else {
-            startStopLabel.text = AppStringConstants.StartText
         }
         if timer != nil {
             timer.invalidate()
@@ -110,7 +108,12 @@ extension ViewController {
 extension ViewController {
     func appGoingToBackground() {
         
+        if selectedButton != nil {
+            UserDefaults.standard.set(selectedButton.tag, forKey: "selectedButtonTag")
+            UserDefaults.standard.synchronize()
+        }
         endTimer()
+        stopAudio()
         if remainingStopWatchTimeInSeconds > 0 {
             UserDefaults.standard.set(Date(timeIntervalSinceNow: TimeInterval(remainingStopWatchTimeInSeconds)), forKey: "timerEndingDate")
             UserDefaults.standard.synchronize()
@@ -118,6 +121,12 @@ extension ViewController {
         }
     }
     func appDidBecomeActive() {
+        AppUtils.removeAllLocalNotifications()
+        if UserDefaults.standard.object(forKey: "selectedButtonTag") != nil {
+            let tag = UserDefaults.standard.object(forKey: "selectedButtonTag") as! Int
+            selectedButton = self.view.viewWithTag(tag) as! UIButton
+
+        }
         if UserDefaults.standard.object(forKey: "timerEndingDate") != nil { //If there is some ending date
             let endingDate = UserDefaults.standard.object(forKey: "timerEndingDate") as! Date
             if endingDate.compare(Date()) == .orderedDescending {     // If ending date is greater than current date
@@ -127,10 +136,14 @@ extension ViewController {
             }
             else {  // If ending date is smaller than the current date, it means endign date is past now and stop watch has no ramaining Time.
                 remainingStopWatchTimeInSeconds = 0
+                selectedButton = nil
+                endTimer()
             }
         }
         else { //No ending date means stop watch was not running when app went to background or terminated last time or app launches for the first time.
             remainingStopWatchTimeInSeconds = 0
+            selectedButton = nil
+            endTimer()
         }
         setstopWatchRemainingTimeLabelText()
         UserDefaults.standard.removeObject(forKey: "timerEndingDate")
@@ -204,6 +217,7 @@ extension ViewController {
     }
     func stopAudio() {
         audioPlayer.stop()
+        audioPlayer.currentTime = 0.0
     }
 }
 
@@ -227,8 +241,6 @@ extension ViewController {
     @IBAction func oolongButtonClicked(_ sender: UIButton) {
         selectedButton = oolongButton
         remainingStopWatchTimeInSeconds =  60 * 3
-        remainingStopWatchTimeInSeconds =  5
-
         setTimer()
     }
     @IBAction func puErhButtonClicked(_ sender: UIButton) {
@@ -242,15 +254,15 @@ extension ViewController {
         setTimer()
     }
     @IBAction func stopButtonClicked(_ sender: UIButton) {
+        selectedButton = nil
         stopAudio()
         AppUtils.removeAllLocalNotifications()
         if timer != nil && timer.isValid {
             endTimer()
-            setstopWatchRemainingTimeLabelText()
         }
-        else if selectedButton != nil {
-            setTimer()
-        }
+        remainingStopWatchTimeInSeconds = 0
+        setstopWatchRemainingTimeLabelText()
+
     }
 }
 
