@@ -82,7 +82,7 @@ extension ViewController {
         if remainingStopWatchTimeInSeconds <= 0 {
             remainingStopWatchTimeInSeconds = 0
             
-            selectedButton = nil
+            //selectedButton = nil
            
             //invalidate timer
             endTimer()
@@ -90,8 +90,6 @@ extension ViewController {
             setstopWatchRemainingTimeLabelText()
             //beep
             playAudio()
-//            let systemSoundID: SystemSoundID = 1016
-//            AudioServicesPlaySystemSound(systemSoundID)
         }
         else {
             setstopWatchRemainingTimeLabelText()
@@ -136,13 +134,13 @@ extension ViewController {
             }
             else {  // If ending date is smaller than the current date, it means endign date is past now and stop watch has no ramaining Time.
                 remainingStopWatchTimeInSeconds = 0
-                selectedButton = nil
+                //selectedButton = nil
                 endTimer()
             }
         }
         else { //No ending date means stop watch was not running when app went to background or terminated last time or app launches for the first time.
             remainingStopWatchTimeInSeconds = 0
-            selectedButton = nil
+           // selectedButton = nil
             endTimer()
         }
         setstopWatchRemainingTimeLabelText()
@@ -257,9 +255,7 @@ extension ViewController {
         selectedButton = nil
         stopAudio()
         AppUtils.removeAllLocalNotifications()
-        if timer != nil && timer.isValid {
-            endTimer()
-        }
+        endTimer()
         remainingStopWatchTimeInSeconds = 0
         setstopWatchRemainingTimeLabelText()
 

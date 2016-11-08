@@ -33,6 +33,14 @@
 		<string>NeutraTextDemi.otf</string>
 		<string>NeutraTextLight.otf</string>
 		<string>NeutraTextTFBold.otf</string>
+		<string>txtbold.otf</string>
+		<string>txtbolditalic.otf</string>
+		<string>txtbook.otf</string>
+		<string>txtbookitalic.otf</string>
+		<string>txtdemi.otf</string>
+		<string>txtdemiitalic.otf</string>
+		<string>txtlight.otf</string>
+		<string>txtlightitalic.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

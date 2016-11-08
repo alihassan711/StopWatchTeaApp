@@ -50,6 +50,14 @@
 		80AB0E191DC76EDE00FBE49B /* NeutraTextLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeutraTextLight.otf; sourceTree = "<group>"; };
 		80AB0E1A1DC76EDE00FBE49B /* NeutraTextTFBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NeutraTextTFBold.otf; sourceTree = "<group>"; };
 		80AB0E251DC7764300FBE49B /* AppStringConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStringConstants.swift; sourceTree = "<group>"; };
+		80BA41031DD1F5CD00451031 /* txtbold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = txtbold.otf; sourceTree = "<group>"; };
+		80BA41041DD1F5CD00451031 /* txtbolditalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = txtbolditalic.otf; sourceTree = "<group>"; };
+		80BA41051DD1F5CD00451031 /* txtbook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = txtbook.otf; sourceTree = "<group>"; };
+		80BA41061DD1F5CD00451031 /* txtbookitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = txtbookitalic.otf; sourceTree = "<group>"; };
+		80BA41071DD1F5CD00451031 /* txtdemi.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = txtdemi.otf; sourceTree = "<group>"; };
+		80BA41081DD1F5CD00451031 /* txtdemiitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = txtdemiitalic.otf; sourceTree = "<group>"; };
+		80BA41091DD1F5CD00451031 /* txtlight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = txtlight.otf; sourceTree = "<group>"; };
+		80BA410A1DD1F5CD00451031 /* txtlightitalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = txtlightitalic.otf; sourceTree = "<group>"; };
 		80C299571DBF8A6700900C63 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		80C299591DBF904E00900C63 /* beep21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = beep21.mp3; sourceTree = "<group>"; };
 		80C299601DBF9ABA00900C63 /* UIButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtension.swift; sourceTree = "<group>"; };
@@ -126,6 +134,14 @@
 				80AB0E181DC76EDE00FBE49B /* NeutraTextDemi.otf */,
 				80AB0E191DC76EDE00FBE49B /* NeutraTextLight.otf */,
 				80AB0E1A1DC76EDE00FBE49B /* NeutraTextTFBold.otf */,
+				80BA41031DD1F5CD00451031 /* txtbold.otf */,
+				80BA41041DD1F5CD00451031 /* txtbolditalic.otf */,
+				80BA41051DD1F5CD00451031 /* txtbook.otf */,
+				80BA41061DD1F5CD00451031 /* txtbookitalic.otf */,
+				80BA41071DD1F5CD00451031 /* txtdemi.otf */,
+				80BA41081DD1F5CD00451031 /* txtdemiitalic.otf */,
+				80BA41091DD1F5CD00451031 /* txtlight.otf */,
+				80BA410A1DD1F5CD00451031 /* txtlightitalic.otf */,
 			);
 			path = FONTS;
 			sourceTree = "<group>";
