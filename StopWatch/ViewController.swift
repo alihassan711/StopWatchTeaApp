@@ -158,7 +158,6 @@ extension ViewController {
         let notificationScheduleDate = Date(timeIntervalSinceNow: TimeInterval(remainingStopWatchTimeInSeconds) )
         AppUtils.scheduleLocalNotification(notificationScheduleDate, alertBody: "Your Tea is Ready. Enjoy.", alertAction: "be awesome!", soundName: "radar.mp3", userInfo: ["CustomField1": "w00t" as AnyObject])
     }
-
 }
 
 //MARK: UI SETTINGS
@@ -199,18 +198,17 @@ extension ViewController {
     func initializeAudioPlayer() {
         let path = Bundle.main.path(forResource: "radar", ofType:"mp3")!
         let url = URL(fileURLWithPath: path)
-        
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: url)
         }
         catch{
-            
         }
-
     }
     func playAudio() {
+        initializeAudioPlayer()
         audioPlayer.numberOfLoops = -1
         audioPlayer.prepareToPlay()
+        audioPlayer.volume = 1.0
         audioPlayer.play()
     }
     func stopAudio() {
@@ -223,7 +221,7 @@ extension ViewController {
 extension ViewController {
     @IBAction func blackButtonClicked(_ sender: UIButton) {
         selectedButton = blackButton
-        remainingStopWatchTimeInSeconds =  60 * 5
+        remainingStopWatchTimeInSeconds =   5 * 60
         setTimer()
     }
     @IBAction func rooibosButtonClicked(_ sender: UIButton) {

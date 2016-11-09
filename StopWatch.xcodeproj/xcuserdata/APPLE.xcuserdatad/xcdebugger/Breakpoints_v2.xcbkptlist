@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "StopWatch/ViewController.swift"
-            timestampString = "499996935.542533"
+            timestampString = "500329676.684393"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "150"
-            endingLineNumber = "150"
-            landmarkName = "appDidBecomeActive()"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "timerUpdated()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
