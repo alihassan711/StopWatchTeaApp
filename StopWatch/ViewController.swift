@@ -145,6 +145,7 @@ extension ViewController {
         }
         setstopWatchRemainingTimeLabelText()
         UserDefaults.standard.removeObject(forKey: "timerEndingDate")
+        UserDefaults.standard.removeObject(forKey: "selectedButtonTag")
         UserDefaults.standard.synchronize()
     }
 
